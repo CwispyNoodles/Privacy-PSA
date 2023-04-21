@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <h1>My React App</h1>
-      <h2>Author: Bum Chan Koo</h2>
+      <h2>Author: Bum Chan</h2>
       <Upload>
         <p>Upload</p>
       </Upload>
