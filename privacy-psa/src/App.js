@@ -1,5 +1,10 @@
 import { InboxOutlined } from '@ant-design/icons';
 import { message, Upload } from 'antd';
+import {Link, Routes, Route, Router, BrowserRouter, useRoutes,} from "react-router-dom"
+import './App.css'
+import Drop from './Drop';
+import TrainingProgress from './TrainingProgress';
+
 const { Dragger } = Upload;
 const props = {
   name: 'file',
@@ -23,20 +28,14 @@ const props = {
 
 function App() {
   return (
-    <p className='main' style={{width:"1000px", position:"absolute", left:"50%", transform: "translate(-50%,0%)"}}>
-      <h1>Scammer Bot 9000</h1>
-      <Dragger {...props}>
-      <p className="ant-upload-drag-icon">
-          <InboxOutlined />
-      </p>
-      <p className="ant-upload-text">Click or drag file to this area to upload</p>
-      <p className="ant-upload-hint">
-          Support for a single or bulk upload. Strictly prohibited from uploading company data or other
-          banned files.
-      </p>
-    </Dragger>
-    <p>jdfajdsaklfj</p>
-    </p>
+    <>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/Privacy-PSA' element={<Drop/>}/>
+        <Route path='/TrainingProgress' element={<TrainingProgress/>}/>
+      </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 
