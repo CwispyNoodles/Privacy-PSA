@@ -14,7 +14,7 @@ function TrainingProgress () {
 
   const increase = () => {
     setPercent((prevPercent) => {
-      const newPercent = prevPercent + 1;
+      const newPercent = prevPercent + 3;
       if (newPercent > 100) {
         return 100;
       }
