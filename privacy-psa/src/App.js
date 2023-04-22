@@ -1,10 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
-import {Upload} from 'antd'
-
-const { createRoot } = ReactDOM;
-const {  InboxOutlined  } = icons;
-const {  message, Upload  } = antd;
+import { InboxOutlined } from '@ant-design/icons';
+import { message, Upload } from 'antd';
 const { Dragger } = Upload;
 const props = {
   name: 'file',
@@ -28,16 +23,20 @@ const props = {
 
 function App() {
   return (
-    <Dragger {...props}>
-    <p className="ant-upload-drag-icon">
-      <InboxOutlined />
+    <p className='main' style={{width:"1000px", position:"absolute", left:"50%", transform: "translate(-50%,0%)"}}>
+      <h1>Scammer Bot 9000</h1>
+      <Dragger {...props}>
+      <p className="ant-upload-drag-icon">
+          <InboxOutlined />
+      </p>
+      <p className="ant-upload-text">Click or drag file to this area to upload</p>
+      <p className="ant-upload-hint">
+          Support for a single or bulk upload. Strictly prohibited from uploading company data or other
+          banned files.
+      </p>
+    </Dragger>
+    <p>jdfajdsaklfj</p>
     </p>
-    <p className="ant-upload-text">Click or drag file to this area to upload</p>
-    <p className="ant-upload-hint">
-      Support for a single or bulk upload. Strictly prohibited from uploading company data or other
-      banned files.
-    </p>
-  </Dragger>
   );
 }
 
